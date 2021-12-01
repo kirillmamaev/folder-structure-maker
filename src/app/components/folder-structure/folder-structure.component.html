@@ -1,0 +1,7 @@
+<div class="folder-structure">
+    <div class="title">FOLDER STRUCTURE MAKER</div>
+    <input type="button" value="Add folder to root" class="btn-add-to-root" (click)="showNewNodeDialog()">
+    <ng-container *ngIf="treeData$ | async as treeRoot">
+        <app-folder #rootFolder [node]="treeRoot" [isHidden]="true"></app-folder>
+    </ng-container>
+</div>

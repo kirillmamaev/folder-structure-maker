@@ -1,0 +1,17 @@
+<div *ngIf="isDialogVisible" class="dialog-item">
+    <ng-container *ngIf="isRoot || nodeType != TreeNodeEnum.UNSET; then nameDialog; else buttonsDialog"></ng-container>
+    <ng-template #buttonsDialog>
+        <div class="dialog-buttons">
+            <button (click)="setNodeType(TreeNodeEnum.FILE)">File</button>
+            <button (click)="setNodeType(TreeNodeEnum.FOLDER)">Folder</button>
+        </div>
+    </ng-template>
+    <ng-template #nameDialog>
+        <div class="create-node-dialog">
+            <img src="/assets/folder-open-regular.svg" class="folder-icon">
+            <input type="text" [(ngModel)]="nodeName" class="dialog-text">
+            <button (click)="createNewNode()" class="btn-save"><i class="fa fa-check"></i></button>
+            <button (click)="closeDialog()" class="btn-cancel"><i class="fa fa-times"></i></button>
+        </div>
+    </ng-template>
+</div>
