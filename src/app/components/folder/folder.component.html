@@ -1,7 +1,7 @@
 <div *ngIf="!isHidden" class="folder" (mouseover)="hideControls(false)" (mouseout)="hideControls(true)">
     <img src="/assets/folder-open-regular.svg" class="folder-icon">
     {{ node.name }}
-    <button [hidden]="isControlHidden" (click)="showNewNodeDialog()" class="btn"><i class="fa fa-plus"></i></button>
+    <button [hidden]="isControlHidden" (click)="showCreateNodeDialog()" class="btn"><i class="fa fa-plus"></i></button>
     <button [hidden]="isControlHidden" (click)="deleteNode(parentNode, index)" class="btn"><i class="fa fa-trash"></i></button>
 </div>
 <ul *ngIf="node.children" [ngClass]="getFolderListClass()">
@@ -11,7 +11,7 @@
             <app-file *ngSwitchCase="TreeNodeEnum.FILE" [parentNode]="node" [node]="childNode" [index]="childIndex"></app-file>
         </ng-container>
     </li>
-    <li *ngIf="isNewNodeDialogVisible" [ngClass]="getFolderItemClass()">
-        <app-create-node-dialog [parentNode]="node" [isRoot]="isHidden" [(isDialogVisible)]="isNewNodeDialogVisible"></app-create-node-dialog>
+    <li *ngIf="isCreateNodeDialogVisible" [ngClass]="getFolderItemClass()">
+        <app-create-node-dialog [parentNode]="node" [isRoot]="isHidden" [(isDialogVisible)]="isCreateNodeDialogVisible"></app-create-node-dialog>
     </li>
 </ul>

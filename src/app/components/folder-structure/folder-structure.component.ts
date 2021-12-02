@@ -15,8 +15,8 @@ export class FolderStructureComponent {
 
   constructor(private folderStructureService: FolderStructureService) { }
 
-  public showNewNodeDialog(): void {
-    this.rootFolder.showNewNodeDialog();
+  public showCreateNodeDialog(): void {
+    this.rootFolder.showCreateNodeDialog();
   }
 
 }

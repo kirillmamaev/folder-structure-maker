@@ -16,7 +16,7 @@ export class FolderComponent {
   @Input() public node!: TreeNodeModel;
   @Input() public index!: number;
   @Input() public isHidden!: boolean;
-  @Input() public isNewNodeDialogVisible = false;
+  @Input() public isCreateNodeDialogVisible = false;
   
   public isControlHidden = true;
 
@@ -26,8 +26,8 @@ export class FolderComponent {
     this.isControlHidden = value;
   }
   
-  public showNewNodeDialog(): void {
-    this.isNewNodeDialogVisible = true;
+  public showCreateNodeDialog(): void {
+    this.isCreateNodeDialogVisible = true;
   }
   
   public deleteNode(parentNode: TreeNodeModel, childIndex: number): void {
