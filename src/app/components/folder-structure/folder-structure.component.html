@@ -3,7 +3,7 @@
         <h1 class="title">FOLDER STRUCTURE MAKER</h1>
     </header>
     <figure class="folder-structure">
-        <input type="button" value="Add folder to root" class="btn-add-to-root" (click)="showCreateNodeDialog()">
+        <button (click)="showCreateNodeDialog()" class="btn-add-to-root">Add folder to root</button>
         <ng-container *ngIf="treeData$ | async as treeRoot">
             <app-folder #rootFolder [node]="treeRoot" [isHidden]="true"></app-folder>
         </ng-container>

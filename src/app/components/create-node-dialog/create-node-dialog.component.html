@@ -9,7 +9,7 @@
     <ng-template #nameDialog>
         <div class="create-node-dialog">
             <img src="/assets/folder-open-regular.svg" class="folder-icon">
-            <input type="text" [(ngModel)]="nodeName" class="dialog-input">
+            <input aria-label="Enter name" type="text" [(ngModel)]="nodeName" class="dialog-input">
             <button (click)="createNewNode()" class="btn-save"><i class="fa fa-check"></i></button>
             <button (click)="closeDialog()" class="btn-cancel"><i class="fa fa-times"></i></button>
         </div>
