@@ -4,14 +4,14 @@
     <button (click)="showCreateNodeDialog()" class="btn"><i class="fa fa-plus"></i></button>
     <button (click)="deleteNode(parentNode, index)" class="btn"><i class="fa fa-trash"></i></button>
 </div>
-<ul *ngIf="node.children" [ngClass]="getFolderListClass()">
-    <li *ngFor="let childNode of node.children; let childIndex = index" [ngClass]="getFolderItemClass()">
+<ul *ngIf="node.children" [ngClass]="folderListClass">
+    <li *ngFor="let childNode of node.children; let childIndex = index" [ngClass]="folderListItemClass">
         <ng-container [ngSwitch]="childNode.type">
             <app-folder *ngSwitchCase="TreeNodeEnum.FOLDER" [parentNode]="node" [node]="childNode" [index]="childIndex"></app-folder>
             <app-file *ngSwitchCase="TreeNodeEnum.FILE" [parentNode]="node" [node]="childNode" [index]="childIndex"></app-file>
         </ng-container>
     </li>
-    <li *ngIf="isCreateNodeDialogVisible" [ngClass]="getFolderItemClass()">
+    <li *ngIf="isCreateNodeDialogVisible" [ngClass]="folderListItemClass">
         <app-create-node-dialog [parentNode]="node" [isRoot]="isHidden" [(isDialogVisible)]="isCreateNodeDialogVisible"></app-create-node-dialog>
     </li>
 </ul>
