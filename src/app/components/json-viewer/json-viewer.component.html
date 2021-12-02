@@ -1,3 +1,8 @@
-<div *ngIf="(treeDataJson$ | async) as treeDataJson" class="json-viewer">
-    {{ treeDataJson }}
-</div>
+<section>
+    <header>
+        <h1 class="title">FOLDER STRUCTURE JSON VIEWER</h1>
+    </header>
+    <figure>
+        <textarea readonly *ngIf="(treeDataJson$ | async) as treeDataJson" class="json-viewer">{{ treeDataJson }}</textarea>
+    </figure>
+</section>

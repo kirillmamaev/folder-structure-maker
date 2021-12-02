@@ -1,16 +1,19 @@
+.title {
+    font-family: Tahoma;
+    font-size: 1rem;
+    color: #FFF;
+    background-color: #000;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
 .folder-structure {
     font-family: Tahoma;
     font-size: 1rem;
-    margin-top: 2rem;
     border: solid 1px #000;
-
-    .title {
-        color: #FFF;
-        background-color: #000;
-        font-weight: bold;
-        text-align: center;
-        padding: 1rem;
-    }
 
     .btn-add-to-root {
         color: #FFF;
