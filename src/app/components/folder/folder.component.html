@@ -1,8 +1,8 @@
-<div *ngIf="!isHidden" class="folder" (mouseover)="hideControls(false)" (mouseout)="hideControls(true)">
+<div *ngIf="!isHidden" class="folder">
     <img src="/assets/folder-open-regular.svg" class="folder-icon">
     {{ node.name }}
-    <button [hidden]="isControlHidden" (click)="showCreateNodeDialog()" class="btn"><i class="fa fa-plus"></i></button>
-    <button [hidden]="isControlHidden" (click)="deleteNode(parentNode, index)" class="btn"><i class="fa fa-trash"></i></button>
+    <button (click)="showCreateNodeDialog()" class="btn"><i class="fa fa-plus"></i></button>
+    <button (click)="deleteNode(parentNode, index)" class="btn"><i class="fa fa-trash"></i></button>
 </div>
 <ul *ngIf="node.children" [ngClass]="getFolderListClass()">
     <li *ngFor="let childNode of node.children; let childIndex = index" [ngClass]="getFolderItemClass()">

@@ -18,14 +18,8 @@ export class FolderComponent {
   @Input() public isHidden!: boolean;
   @Input() public isCreateNodeDialogVisible = false;
   
-  public isControlHidden = true;
-
   constructor(private folderStructureService: FolderStructureService) { }
 
-  public hideControls(value: boolean): void {
-    this.isControlHidden = value;
-  }
-  
   public showCreateNodeDialog(): void {
     this.isCreateNodeDialogVisible = true;
   }

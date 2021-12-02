@@ -13,13 +13,7 @@ export class FileComponent {
   @Input() public node!: TreeNodeModel;
   @Input() public index!: number;
   
-  public isControlHidden = true;
-
   constructor(private folderStructureService: FolderStructureService) { }
-
-  public hideControls(value: boolean): void {
-    this.isControlHidden = value;
-  }
 
   public deleteNode(parentNode: TreeNodeModel, childIndex: number): void {
     this.folderStructureService.deleteNode(parentNode, childIndex);

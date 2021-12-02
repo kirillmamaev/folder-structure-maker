@@ -3,9 +3,17 @@
     border: 1px solid rgba(255, 255, 255, 0);
     padding: 2px;
     margin-left: 0.3rem;
+    
+    .btn {
+        display: none;
+    }
 
     &:hover {
         border: 1px solid rgb(0, 0, 0);
+
+        .btn {
+            display: inline;
+        }
     }
 
     .folder-icon {

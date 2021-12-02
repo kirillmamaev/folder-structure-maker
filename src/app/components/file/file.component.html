@@ -1,5 +1,5 @@
-<div class="file" (mouseover)="hideControls(false)" (mouseout)="hideControls(true)">
+<div class="file">
     <img src="/assets/file-regular.svg" class="file-icon">
     {{ node.name }}
-    <button [hidden]="isControlHidden" (click)="deleteNode(parentNode, index)" class="btn"><i class="fa fa-trash"></i></button>
+    <button (click)="deleteNode(parentNode, index)" class="btn"><i class="fa fa-trash"></i></button>
 </div>
